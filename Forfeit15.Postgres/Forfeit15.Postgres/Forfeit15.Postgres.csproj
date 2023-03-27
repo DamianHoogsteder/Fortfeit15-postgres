@@ -4,6 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageVersion>0.0.1</PackageVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Description>Postgres project for the forfeit15 web api</Description>
+        <RepositoryUrl>https://github.com/DamianHoogsteder/Fortfeit15-postgres.git</RepositoryUrl>
+        <PackageReleaseNotes>Only postgres support</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
