@@ -6,5 +6,4 @@ namespace Forfeit15.Postgres.Models.Nodes;
 public class InfoNode : BaseInfoNode
 {
     public Guid? PatchNoteId { get; set; }
-    public virtual PatchNote? PatchNote { get; set; }
 }

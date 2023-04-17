@@ -20,7 +20,7 @@ public class PatchNote
 
     [DataMember]
     public string Description { get; set; } = null!;
-    
-    [DataMember]
-    public virtual ICollection<InfoNode> InfoNodes { get; set; } = new List<InfoNode>();
+
+    [DataMember] 
+    public virtual ICollection<InfoNode> InfoNodes { get; set; } = null!;
 }
