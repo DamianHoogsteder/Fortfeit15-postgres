@@ -41,4 +41,20 @@ public static class ServiceCollectionExtension
         services.AddDbContext<PreferenceDbContext>(options => options.UseNpgsql(dataSource));
         return services;
     }
+    
+    /// <summary>
+    /// Voegt generieke Postgres verbinding, voor Preferences toe.
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddUserMetaDataPostgres(this IServiceCollection services,
+        IConfiguration configuration)
+    {
+        var connectionString = configuration.GetConnectionString(nameof(UserMetaDataDbContext));
+        var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString);
+        var dataSource = dataSourceBuilder.Build();
+        services.AddDbContext<UserMetaDataDbContext>(options => options.UseNpgsql(dataSource));
+        return services;
+    }
 }
